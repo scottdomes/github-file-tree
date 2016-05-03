@@ -1,0 +1,25 @@
+{
+  "name": "github-filetree",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "production": "webpack -p",
+    "start": "webpack-dev-server"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "axios": "^0.11.0",
+    "react": "~0.14.7",
+    "react-dom": "~0.14.7"
+  },
+  "devDependencies": {
+    "babel-loader": "~6.2.4",
+    "webpack-dev-server": "~1.14.1",
+    "html-webpack-plugin": "~2.12.0",
+    "webpack": "~1.12.14",
+    "babel-core": "~6.7.2",
+    "babel-preset-react": "~6.5.0"
+  }
+}
