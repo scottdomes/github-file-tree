@@ -17,7 +17,7 @@ var Folder = React.createClass({
     var expandedChildren = this.state.expanded ? {"display": "block"} : {"display": "none"};
     return (
       <div className="folder">
-        <p onClick={this.handleClick}>I'm a Folder with the path {this.props.path}</p>
+        <p onClick={this.handleClick}>+{this.props.path}</p>
         <div 
           className="folder-children"
           style={expandedChildren}>

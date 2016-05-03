@@ -22,9 +22,12 @@ var App = React.createClass({
     var tree = this.state.tree
     return (
       <div>
+        <h1>Make Github Great Again</h1>
         <RepoForm
           onSubmit={this.handleSubmitRepo}/>
-        {tree}
+        <div id="tree">
+          {tree}
+        </div>
       </div>
     )
   }

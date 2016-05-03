@@ -3,8 +3,8 @@ var React = require('react');
 var RepoForm = React.createClass({
   getInitialState: function () {
     return {
-      repoInput: '',
-      usernameInput: ''
+      repoInput: 'github-file-tree',
+      usernameInput: 'scottdomes'
     }
   },
   handleSubmit: function (e) {
