@@ -20,6 +20,8 @@ var helpers = {
       return getTree(repoName, username, sha).then(function (response) {
         return response.data.tree;
       });
+    }).catch(function (err) {
+      console.warn('Error in getRepoTree', err);
     });
   }
 };

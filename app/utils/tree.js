@@ -34,7 +34,7 @@ var Tree = {
     });
   },
   getParentPath: function (path) {
-    var result = path.match(/(\w*\/)*/);
+    var result = path.match(/((\w|-)*\/)*/);
     return result[0].substring(0, result[0].length - 1);
   }
 };
