@@ -18,11 +18,11 @@ var Tree = {
   },
   sortComponentTree: function (tree) {
     highestLevelComponents = tree.filter(function (node) {
-      var parent = this.findParent(node.props.path, tree);
-      if (parent === undefined) {
+      var componentParent = this.findParent(node.props.path, tree);
+      if (componentParent === undefined) {
         return true;
       } else {
-        parent.props.children.push(node);
+        componentParent.props.children.push(node);
       }
     }.bind(this))
     return highestLevelComponents;
@@ -35,7 +35,10 @@ var Tree = {
   },
   getParentPath: function (path) {
     var result = path.match(/((\w|-)*\/)*/);
-    return result[0].substring(0, result[0].length - 1);
+    return this.removeTrailingSlash(result[0]);
+  },
+  removeTrailingSlash: function (string) {
+    return string.substring(0, string.length - 1);
   }
 };
 

@@ -19,7 +19,7 @@ var App = React.createClass({
       }.bind(this));
   },
   render: function () {
-    var tree = this.state.tree
+    var tree = this.state.tree;
     return (
       <div>
         <h1>Make Github Great Again</h1>
