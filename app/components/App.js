@@ -1,3 +1,4 @@
+require('../styles/stylesheet.css');
 var React = require('react');
 var Tree = require('../utils/tree');
 var githubHelpers = require('../utils/githubHelpers');
