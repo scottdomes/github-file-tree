@@ -3,7 +3,13 @@ var githubHelpers = require('../utils/githubHelpers');
 
 var App = React.createClass({
   componentDidMount: function () {
-    console.log(githubHelpers.getRepoTree());
+    githubHelpers.getRepoTree()
+      .then(function (tree) {
+        this.buildTree(tree);
+      }.bind(this));
+  },
+  buildTree: function (tree) {
+    console.log(tree)
   },
   render: function () {
     return (
