@@ -1,19 +1,27 @@
 var React = require('react');
+var Tree = require('../utils/tree');
 var githubHelpers = require('../utils/githubHelpers');
 
 var App = React.createClass({
+  getInitialState: function () {
+    return {
+      tree: []
+    }
+  },
   componentDidMount: function () {
     githubHelpers.getRepoTree()
       .then(function (tree) {
-        this.buildTree(tree);
+        this.setState({
+          tree: Tree.build(tree)
+        });
       }.bind(this));
   },
-  buildTree: function (tree) {
-    console.log(tree)
-  },
   render: function () {
+    var tree = this.state.tree
     return (
-      <h1>Hello world!</h1>
+      <div>
+        {tree}
+      </div>
     )
   }
 });
