@@ -1,11 +1,9 @@
 var React = require('react');
 
-var File = React.createClass({
-  render: function () {
+function File (props) {
     return (
-      <p>-{this.props.path}</p>
+      <p>-{props.path}</p>
     )
-  }
-});
+}
 
 module.exports = File;
