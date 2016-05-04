@@ -14,7 +14,7 @@ var Tree = {
       } else if (node.type === "tree") {
         return React.createElement(Folder, { key: index, path: node.path, children: [] });
       }
-    })
+    });
   },
   sortComponentTree: function (tree) {
     highestLevelComponents = tree.filter(function (node) {
@@ -24,7 +24,7 @@ var Tree = {
       } else {
         componentParent.props.children.push(node);
       }
-    }.bind(this))
+    }.bind(this));
     return highestLevelComponents;
   },
   findParent: function (path, tree) {

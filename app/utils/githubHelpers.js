@@ -6,11 +6,11 @@ var sec = API.sec;
 var param = "?client_id=" + id + "&client_secret=" + sec;
 
 function getRepoInfo (repoName, username) {
-  return axios.get('https://api.github.com/repos/' + username + '/' + repoName + '/commits/master' + param)
+  return axios.get('https://api.github.com/repos/' + username + '/' + repoName + '/commits/master' + param);
 }
 
 function getTree (repoName, username, sha) {
-  return axios.get('https://api.github.com/repos/' + username + '/' + repoName + '/git/trees/' + sha + param + '&recursive=1')
+  return axios.get('https://api.github.com/repos/' + username + '/' + repoName + '/git/trees/' + sha + param + '&recursive=1');
 }
 
 var helpers = {

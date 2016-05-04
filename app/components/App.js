@@ -2,7 +2,7 @@ require('../styles/stylesheet.css');
 var React = require('react');
 var Tree = require('../utils/tree');
 var githubHelpers = require('../utils/githubHelpers');
-var RepoForm = require('./RepoForm')
+var RepoForm = require('./RepoForm');
 
 var App = React.createClass({
   getInitialState: function () {
