@@ -21,7 +21,12 @@ var helpers = {
         return response.data.tree;
       });
     }).catch(function (err) {
-      console.warn('Error in getRepoTree', err);
+      if (err.status === 404) {
+        alert("Repo not found. To the moon with you!");
+        return [];
+      } else {
+        console.warn('Error in getRepoTree', err);
+      }
     });
   }
 };

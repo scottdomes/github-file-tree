@@ -10,9 +10,9 @@ var Tree = {
   buildComponents: function (tree) {
     return tree.map(function (node, index) {
       if (node.type === "blob") {
-        return React.createElement(File, { key: index, path: node.path })
+        return React.createElement(File, { key: index, path: node.path });
       } else if (node.type === "tree") {
-        return React.createElement(Folder, { key: index, path: node.path, children: [] })
+        return React.createElement(Folder, { key: index, path: node.path, children: [] });
       }
     })
   },
