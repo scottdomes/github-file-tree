@@ -1,5 +1,5 @@
 var axios = require('axios');
-var API = require('./api')
+var API = require('./api');
 
 var id = API.id;
 var sec = API.sec;
