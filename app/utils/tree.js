@@ -3,7 +3,7 @@ var File = require('../components/File');
 var Folder = require('../components/Folder');
 
 var Tree = {
-  build: function (tree) {
+  buildComponentTree: function (tree) {
     var componentTree = this.buildComponents(tree);
     return this.sortComponentTree(componentTree);
   },

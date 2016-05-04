@@ -14,7 +14,7 @@ var App = React.createClass({
     githubHelpers.getRepoTree(repoName, username)
       .then(function (tree) {
         this.setState({
-          tree: Tree.build(tree)
+          tree: Tree.buildComponentTree(tree)
         });
       }.bind(this));
   },
